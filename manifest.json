@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Inverter",
+  "version": "1.0",
+  "description": "Inverts colors on the current page with a toggle.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Toggle Inversion"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
